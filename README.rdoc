@@ -1,0 +1,35 @@
+= Friendly MIME
+
+This is a clone from the removed https://github.com/s8ky/friendly_mime
+
+Friendly::MIME provides possibility to show friendly description of a document by the given MIME type.
+
+Add friendly_mime to your rails initializer:
+
+    # initializers/friendly_mime.rb
+    require 'friendly_mime'
+    Friendly::MIME.load
+
+And now you can find by content type or file extension:
+
+    > Friendly::MIME.find 'application/zip'
+    => "Zip Archive"
+
+    > Friendly::MIME.find '.zip'
+    => "Zip Archive"
+
+== Contributing to friendly_mime
+ 
+* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.
+* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.
+* Fork the project.
+* Start a feature/bugfix branch.
+* Commit and push until you are happy with your contribution.
+* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
+* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+
+== Copyright
+
+Copyright (c) 2013 Łukasz Śliwa. See LICENSE.txt for
+further details.
+
